@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		489897B32363494E00F10557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897B22363494E00F10557 /* AppDelegate.swift */; };
-		489897B72363494E00F10557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897B62363494E00F10557 /* ViewController.swift */; };
+		489897B72363494E00F10557 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897B62363494E00F10557 /* HomeController.swift */; };
 		489897BA2363494E00F10557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489897B82363494E00F10557 /* Main.storyboard */; };
 		489897BC2363494F00F10557 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489897BB2363494F00F10557 /* Assets.xcassets */; };
 		489897BF2363494F00F10557 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 489897BD2363494F00F10557 /* LaunchScreen.storyboard */; };
+		489897D02364211C00F10557 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897CF2364211C00F10557 /* Reachability.swift */; };
+		489897D22364261200F10557 /* Deviice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897D12364261200F10557 /* Deviice.swift */; };
+		489897D42364264800F10557 /* Luminous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489897D32364264800F10557 /* Luminous.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		489897AF2363494E00F10557 /* SystemInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SystemInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489897B22363494E00F10557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		489897B62363494E00F10557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		489897B62363494E00F10557 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		489897B92363494E00F10557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		489897BB2363494F00F10557 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		489897BE2363494F00F10557 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		489897C02363494F00F10557 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		489897CF2364211C00F10557 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		489897D12364261200F10557 /* Deviice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deviice.swift; sourceTree = "<group>"; };
+		489897D32364264800F10557 /* Luminous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Luminous.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,89 @@
 		489897B12363494E00F10557 /* SystemInfo */ = {
 			isa = PBXGroup;
 			children = (
+				489897C72364201700F10557 /* Service */,
+				489897C62364200000F10557 /* Model */,
+				489897C82364202F00F10557 /* View */,
+				489897C92364203B00F10557 /* Controller */,
 				489897B22363494E00F10557 /* AppDelegate.swift */,
-				489897B62363494E00F10557 /* ViewController.swift */,
 				489897B82363494E00F10557 /* Main.storyboard */,
 				489897BB2363494F00F10557 /* Assets.xcassets */,
 				489897BD2363494F00F10557 /* LaunchScreen.storyboard */,
 				489897C02363494F00F10557 /* Info.plist */,
 			);
 			path = SystemInfo;
+			sourceTree = "<group>";
+		};
+		489897C62364200000F10557 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		489897C72364201700F10557 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				489897CE236420FD00F10557 /* Luminous */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		489897C82364202F00F10557 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		489897C92364203B00F10557 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				489897CD236420C400F10557 /* Network */,
+				489897CC236420B700F10557 /* System */,
+				489897CB236420A800F10557 /* Base */,
+				489897CA2364208400F10557 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		489897CA2364208400F10557 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				489897B62363494E00F10557 /* HomeController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		489897CB236420A800F10557 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		489897CC236420B700F10557 /* System */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		489897CD236420C400F10557 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		489897CE236420FD00F10557 /* Luminous */ = {
+			isa = PBXGroup;
+			children = (
+				489897CF2364211C00F10557 /* Reachability.swift */,
+				489897D12364261200F10557 /* Deviice.swift */,
+				489897D32364264800F10557 /* Luminous.swift */,
+			);
+			path = Luminous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +216,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				489897B72363494E00F10557 /* ViewController.swift in Sources */,
+				489897B72363494E00F10557 /* HomeController.swift in Sources */,
+				489897D42364264800F10557 /* Luminous.swift in Sources */,
 				489897B32363494E00F10557 /* AppDelegate.swift in Sources */,
+				489897D02364211C00F10557 /* Reachability.swift in Sources */,
+				489897D22364261200F10557 /* Deviice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
